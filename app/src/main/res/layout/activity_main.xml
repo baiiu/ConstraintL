@@ -1,38 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:layout_height="match_parent">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        >
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <include layout="@layout/constraint02"/>
+
+        <include layout="@layout/constraint02" />
 
 
         <include
             layout="@layout/constraint01"
-            android:visibility="gone"
-            />
+            android:visibility="gone" />
 
 
-        <include layout="@layout/constraint_guideline"/>
-
-    </FrameLayout>
+        <include layout="@layout/constraint_guideline" />
 
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        >
+        <include layout="@layout/constraint_complex" />
 
-        <include layout="@layout/constraint_complex"/>
 
-    </FrameLayout>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
