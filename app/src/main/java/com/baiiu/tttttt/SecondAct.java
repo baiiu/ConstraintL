@@ -1,32 +1,28 @@
 package com.baiiu.tttttt;
 
 import android.annotation.TargetApi;
-import android.content.Intent;
 import android.os.Build;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.FrameMetrics;
-import android.view.View;
 import android.view.Window;
 
-public class MainActivity extends AppCompatActivity {
-
+/**
+ * author: zhuzhe
+ * time: 2018/6/27
+ * description:
+ */
+public class SecondAct extends AppCompatActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         layoutmeasureDuration();
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.constraint_sample);
-
-        findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SecondAct.class));
-            }
-        });
+        setContentView(R.layout.relative_sample);
     }
-
 
     @TargetApi(Build.VERSION_CODES.N)
     private void layoutmeasureDuration() {
